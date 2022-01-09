@@ -23,7 +23,7 @@ Locale.setDefault(Locale.US);
 		
 		ProductService ps = new ProductService();
 		
-		double sum = ps.filteredSum(list);
+		double sum = ps.filteredSum(list, p -> p.getPreco() > 100);
 		
 		System.out.println("Soma= " + String.format("%.2f", sum));
 
